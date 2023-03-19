@@ -1,0 +1,7 @@
+{
+  "name": "holaaa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
