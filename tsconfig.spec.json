@@ -3,8 +3,18 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "moduleResolution": "node",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "types": [
-      "jasmine"
+      "jasmine",
+      "node"
     ]
   },
   "files": [
@@ -13,6 +23,12 @@
   ],
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "www"
   ]
 }

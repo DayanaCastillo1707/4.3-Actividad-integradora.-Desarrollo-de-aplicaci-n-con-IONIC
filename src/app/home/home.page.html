@@ -7,14 +7,48 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/img/logo-icon.png">
+      </ion-thumbnail>
+      <ion-label>Icon</ion-label>
+      <a (click)="showText1 = !showText1">
+        {{ showText1 ? 'Ocultar texto' : 'Mostrar texto' }}
+      </a>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/img/logo-react-icon.png">
+      </ion-thumbnail>
+      <ion-label>React-Native</ion-label>
+    <a (click)="showText2 = !showText2">
+      {{ showText2 ? 'Ocultar texto' : 'Mostrar texto' }}
+    </a>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="assets/img/angular-logo.png">
+      </ion-thumbnail>
+      <ion-label>Angular</ion-label>
+      <a (click)="showText3 = !showText3">
+        {{ showText3 ? 'Ocultar texto' : 'Mostrar texto' }}
+      </a>      
+    </ion-item>
+  </ion-list>
+  <ion-card *ngIf="showText1">
+    <ion-card-content>
+      <p>Icon es una biblioteca de iconos de código abierto que proporciona más de 1500 iconos gratuitos para su uso en proyectos web y de aplicaciones móviles. Los iconos de Icon se pueden personalizar en tamaño, color y estilo, y se pueden integrar fácilmente en proyectos utilizando una variedad de herramientas y marcos, como React Native.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="showText2">
+    <ion-card-content>
+      <p>React Native es un marco de desarrollo de aplicaciones móviles que permite a los desarrolladores crear aplicaciones nativas para iOS y Android utilizando JavaScript y React. React Native utiliza una arquitectura de componentes reutilizables para construir interfaces de usuario y utiliza la plataforma subyacente del sistema operativo para garantizar un alto rendimiento y una experiencia de usuario nativa.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="showText3">
+    <ion-card-content>
+      <p>Angular es un framework usado para ser apps de una sola pajina aunque se puede combinar con Ionic puede tener mas de una. En el caso de este proyecto utilise angularl, lo utilise por ser muy popular porende habira mas jente que conose del tema. </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
